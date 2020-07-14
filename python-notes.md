@@ -62,6 +62,23 @@ Properly name temporary variables. No more tmp etc.
 
 etc.
 
+## Data types
+
+### Deque
+
+Double ended queue.
+
+- `append`
+- `appendleft`
+- `extend`
+- `extendleft`
+- `insert`
+
+- `pop`
+- `popleft`
+- `remove`
+- `clear`
+
 ## Iterators
 
 ```python
