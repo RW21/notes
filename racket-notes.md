@@ -1,3 +1,25 @@
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [-](#-)
+    - [Datatypes](#datatypes)
+        - [Symbols](#symbols)
+        - [Vectors](#vectors)
+        - [Hash Tables](#hash-tables)
+    - [Expressions and Definitions](#expressions-and-definitions)
+        - [`apply` Function](#apply-function)
+        - [Lambda](#lambda)
+        - [Define](#define)
+        - [Local Binding](#local-binding)
+        - [Sequencing](#sequencing)
+        - [Conditionals](#conditionals)
+    - [Structure Types](#structure-types)
+    - [I/O](#io)
+    - [Iteration/Comprehensions](#iterationcomprehensions)
+
+<!-- markdown-toc end -->
+
+
 ### List Loops
 
 - `map`
@@ -150,3 +172,68 @@ Note there are immutable and mutable hash tables.
 ## Structure Types
 
 ```racket
+(struct posn (x y))
+(posn 1 2)
+
+; access
+(posn-x (posn 1 2))
+; 1
+(posn? 3)
+;#f
+
+; subtypes
+(struct 3d-posn posn (z))
+(3d-posn 1 2 3)
+```
+
+- A generic `equal?` automatically recurs and compares structs.
+
+### Assignment
+
+```racket
+(set! id expr)
+```
+
+## I/O
+
+A Racket port represents a source or sink of data.
+
+## Iteration/Comprehensions
+
+```racket
+(for ([i '(1 2 3)]) (display i))
+; 123
+
+(for ([i 4]) (display i))
+; 0123
+```
+
+- `in-range` is just `range` in Python.
+
+```racket
+(for ([i (in-range 1 4)]
+        [chapter '("Intro" "Details" "Conclusion")])
+		    (printf "Chapter ~a. ~a\n" i chapter))
+```
+
+```racket
+(for* ([book '("Guide" "Reference")]
+         [chapter '("Intro" "Details" "Conclusion")]
+		          #:when (not (equal? chapter "Details")))
+				      (printf "~a ~a\n" book chapter))
+					 ; Guide Intro
+					  
+					 ; Guide Conclusion
+					  
+					 ; Reference Intro
+					  
+					 ; Reference Conclusion
+```
+
+- `for/list`
+- `for/vector`
+- `for/and`
+- `for/or`
+
+					  
+					  

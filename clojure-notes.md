@@ -1,3 +1,21 @@
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [-](#-)
+- [Data structures](#data-structures)
+    - [Maps](#maps)
+    - [Keywords](#keywords)
+    - [Sets](#sets)
+        - [Hash sets](#hash-sets)
+        - [Lists](#lists)
+    - [Functions](#functions)
+        - [Defining functions](#defining-functions)
+        - [Destructuring](#destructuring)
+    - [Anonymous Functions](#anonymous-functions)
+    - [Iterations](#iterations)
+
+<!-- markdown-toc end -->
+
 ## Control flow
 
 - `if`
@@ -19,6 +37,8 @@
 :last-name "Who"}
 
 (hash-map :a 1 :b 2)
+
+(get {:a 1} :a)
 ```
 
 - `get` to retrieve.
@@ -36,6 +56,10 @@
 
 - Same as sets in Python.
 - `#{}`
+
+### Lists
+
+- `conj` to add to beginning of a list.
 
 ## Functions
 
@@ -70,4 +94,55 @@ Something like `*args`
   (map codger-communication whippersnappers))
 ```
 
+### Destructuring
+
+```clojure
+(defn my-first
+   [[first-thing]]
+   first-thing)
+
+; returns first in a collection
+```
+
+```clojure
+(defn announce-location
+   [{lat :lat lng :lng}]
+   (println (str "Treasure lat:" kat))
+)
+```
+
+## Anonymous Functions
+
+```clojure
+(fn [param-list]
+   function body)
+   
+; reader macros
+(map #(str "Hi, " %)
+   '("Hi" "sdasda"))
+   
+(* 8 3)
+#(* % 3)
+
+(#(str %1 " and " %2) "corn" "bread")
+```
+
+## Iterations
+
+```clojure
+(loop [iteration 0]
+  (println (str "Iteration " iteration))
+    (if (> iteration 3)
+	    (println "Goodbye!")
+		    (recur (inc iteration))))
+			
+```
+
+- `loop` has better performace than recursion.
+
+## Regular expressions
+
+```clojure
+#"regular-expressoin"
+```
 

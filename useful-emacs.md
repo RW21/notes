@@ -21,3 +21,12 @@
 ## Shell
 
 - `M-|` to run command on selection.
+
+## Clojure (cider)
+
+- Running
+  - `C-x C-e` Evaluate expression immediately.
+  - `C-c C-k` Compile current buffer.
+  
+- Docs
+  - `C-c C-d C-d` See docs.
