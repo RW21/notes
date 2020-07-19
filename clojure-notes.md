@@ -94,6 +94,21 @@ Something like `*args`
   (map codger-communication whippersnappers))
 ```
 
+### Multifunctions
+
+- `defmulti` and `defmethod`.
+
+### Pre and post condition
+
+- `:pre` and `:post`
+
+
+### Apply
+
+```clojure
+(apply the-function args) ; (the-function args0 args1 args2 ...)
+```
+
 ### Destructuring
 
 ```clojure
@@ -139,6 +154,7 @@ Something like `*args`
 ```
 
 - `loop` has better performace than recursion.
+- `recur` knows how to take advantage of being the last expression in a function to avoid accumalating stack frames.
 
 ## Regular expressions
 
@@ -146,3 +162,21 @@ Something like `*args`
 #"regular-expressoin"
 ```
 
+
+## Namespaces
+
+- `def` def binds symbol to ithe value.
+- `defn` is mashup of def and fn.
+- `'symbol`
+
+- Namespaces are a big lookup tables of vars.
+- `ns` to switch and create namespaces.
+- `namespace/function` to call from another ns.
+- `require` to load a namespace.
+- Namespace and filename must match.
+
+```clojure
+(ns blottsbooks.core
+(:require blottsbooks.pricing)
+(:gen-class))
+```
