@@ -2,26 +2,41 @@
 **Table of Contents**
 
 - [-](#-)
+- [Control flow](#control-flow)
 - [Data structures](#data-structures)
-    - [Maps](#maps)
-    - [Keywords](#keywords)
-    - [Sets](#sets)
-        - [Hash sets](#hash-sets)
-        - [Lists](#lists)
-    - [Functions](#functions)
-        - [Defining functions](#defining-functions)
-        - [Destructuring](#destructuring)
-    - [Anonymous Functions](#anonymous-functions)
-    - [Iterations](#iterations)
+- [Maps](#maps)
+- [Keywords](#keywords)
+- [Sets](#sets)
+	- [Hash sets](#hash-sets)
+	- [Lists](#lists)
+	- [Sequences](#sequences)
+		- [Lazy](#lazy)
+- [Functions](#functions)
+	- [Defining functions](#defining-functions)
+	- [Multifunctions](#multifunctions)
+	- [Pre and post condition](#pre-and-post-condition)
+	- [Apply](#apply)
+	- [Destructuring](#destructuring)
+- [Anonymous Functions](#anonymous-functions)
+- [Iterations](#iterations)
+- [Regular expressions](#regular-expressions)
+- [Namespaces](#namespaces)
+- [Sugar](#sugar)
 
 <!-- markdown-toc end -->
+
+## Lein
+
+- `lein new app clojure-study`
+- `lein deps`
+
 
 ## Control flow
 
 - `if`
 - `when`
-  - Doesn't need else.
-  
+- Doesn't need else.
+
 - `nil?`
 
 ## Data structures
@@ -60,6 +75,42 @@
 ### Lists
 
 - `conj` to add to beginning of a list.
+
+### Sequences
+
+- `reverse`
+- `sort`
+- `interpose`
+- `interleave`
+- `filter`
+- `map`
+- `reduce`
+
+Use 
+
+- `first`
+- `rest`
+- `cons`
+
+#### Lazy
+
+- `cycle`
+- `repeat`
+
+- `take`
+- `drop`
+- `nth`
+
+```clojure
+
+(def numbers (iterate inc 1))
+(def titles (map #(str "Wheel of Time, Book " % ) numbers))
+
+
+(defn my-iterate [f x]
+(cons x (lazy-seq (my-iterate f (f x)))))
+```
+
 
 ## Functions
 
@@ -107,6 +158,9 @@ Something like `*args`
 
 ```clojure
 (apply the-function args) ; (the-function args0 args1 args2 ...)
+(apply max [1 2 3])
+; is the same as
+(max 1 2 3)
 ```
 
 ### Destructuring
@@ -179,4 +233,17 @@ Something like `*args`
 (ns blottsbooks.core
 (:require blottsbooks.pricing)
 (:gen-class))
+```
+
+- Automatically includes `clojure.core`.
+
+
+## Sugar
+
+```clojure
+(defn format-top-titles [books] (->>
+books
+(sort-by :rating) reverse
+(take 3)
+(map :title) (interpose " // ") (apply str)))
 ```
