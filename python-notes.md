@@ -244,3 +244,19 @@ Mainly use the following modes:
   - update
    
 Just loop through file to get line by line.
+
+## Numpy
+
+### Arrays
+
+- `np.arange()` 
+  - `range` for arrays
+- `np.shape()` list to array
+- `np.reshape()`
+- `np.flatten('C')` or 'F'
+- `np.concatenate([a,b])`
+
+Mostly the same behaviour as matlab arrays.
+- `a[a % 2 == 0]`
+- `a[:,0]` first column.
+- `a[0,]`
