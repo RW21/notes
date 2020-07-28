@@ -1,3 +1,5 @@
+# Algorithms
+
 ## Bits
 
 ### Shifts
@@ -21,3 +23,12 @@ FROM t1
 ## Operators
 
 - `UNION`
+
+# Agile
+
+- parking lot
+- kanban
+- burndown
+
+
+
