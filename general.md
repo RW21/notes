@@ -7,6 +7,15 @@
 - (1 << 3) == 2^3
 - Shift and bitwise and to determine if the last nth digit is 0 or 1.
 
+## しゃくとり
+
+- Similar to binary search
+
+## Cumulative sum
+
+## DP
+
+
 ## HTTP
 
 - 200 OK
