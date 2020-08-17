@@ -145,6 +145,10 @@ console.log(objectA);
 - `join()`
 - `split()`
 
+### Arrays
+
+- `push()`
+
 # Functional programming
 
 Imperative programming is based on control flow. Declarative programming is a style of programming where the programmers tell the computer what to do by telling it what they want.

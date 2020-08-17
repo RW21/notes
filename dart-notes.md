@@ -166,5 +166,20 @@ class Point {
 
 - For getters and setters use `get` and `set`.
 
-### Generics
+# Flutter
+
+- Use ListView instead of Column to support scrolling.
+
+## Stateful widgets
+
+- `setState()` to tell Flutter to redraw the widget.
+
+## Containers
+
+Use Scaffolds instead depending on how much templating you want.
+
+- Children
+- Padding
+- Width
+- mainAxisSize
 
