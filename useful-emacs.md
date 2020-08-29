@@ -15,12 +15,13 @@
 - `M-p` goes to previous command.
 - `C-c C-c` equivalent to `C-c`.
 
-### Buffers
+## Buffers
 
 - `C-x C-b` to list all buffers.
 - `C-x r w key` to save layout.
 - `C-x r j key` to reapply.
 - `C-x 1` to delete other windows.
+- `C-x k` to kill buffer.
 
 ## Shell
 
@@ -34,3 +35,8 @@
   
 - Docs
   - `C-c C-d C-d` See docs.
+  
+## Racket mode
+
+- `C-c C-z` repl
+- `f5` run file to repl

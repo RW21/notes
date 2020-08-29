@@ -13,6 +13,11 @@
 - `%` to go to matching parenthesis.
 - `0` to beggining. `$` to end.
 - `zz zt zb` to move screen.
+- `H` go to first line of screen.
+- `M` go to middle of screen.
+- `L` go to bottom of screen.
+- `ctrl d` jump forwards half a screen.
+- `ctrl u` jump backwards half a screen.
 
 ## Configs
 
