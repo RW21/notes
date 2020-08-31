@@ -18,6 +18,7 @@
 ## Buffers
 
 - `C-x C-b` to list all buffers.
+- `C-x b` to switch buffers.
 - `C-x r w key` to save layout.
 - `C-x r j key` to reapply.
 - `C-x 1` to delete other windows.
