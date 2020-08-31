@@ -21,8 +21,9 @@
 - `C-x b` to switch buffers.
 - `C-x r w key` to save layout.
 - `C-x r j key` to reapply.
-- `C-x 1` to delete other windows.
-- `C-x k` to kill buffer.
+- `c-x 1` to delete other windows.
+- `c-x k` to kill buffer.
+- `M-x revert-buffer`
 
 ## Shell
 
