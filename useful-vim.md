@@ -61,3 +61,8 @@
 - `:vsp` vertical split.
 - `:sp` horizontal split.
 - `C-w arrow` to move.
+
+## Marks
+
+- `m{markid}` to set mark.
+- `'{markid}` to jump to mark.
