@@ -42,3 +42,12 @@
 
 - `C-c C-z` repl
 - `f5` run file to repl
+
+## Visual
+
+- Visual line mode to wrap text.
+
+## Other
+
+- `M-:` to eval.
+   - `(find-file user-init-file)` to open config file.
