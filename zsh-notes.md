@@ -1,0 +1,1 @@
+- `ctrl + r` to reverse search history
