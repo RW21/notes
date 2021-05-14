@@ -19,6 +19,10 @@
 - `ctrl d` jump forwards half a screen.
 - `ctrl u` jump backwards half a screen.
 
+## Buffers
+
+- `C-6` to switch to recent buffer.
+
 ## Configs
 
 - `:set number` to show line numbers.
